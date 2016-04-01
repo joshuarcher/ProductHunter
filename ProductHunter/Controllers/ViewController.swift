@@ -66,7 +66,7 @@ extension ViewController: KolodaViewDataSource {
     }
     
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
-        return ProductCardView.loadNib(withLabel: "Abot: Build your own digital assistant")
+        return ProductCardView.loadNib(withLabel: "Abot", tagline: "Build your own digital assisstant")
     }
     
     func koloda(koloda: KolodaView, viewForCardOverlayAtIndex index: UInt) -> OverlayView? {
