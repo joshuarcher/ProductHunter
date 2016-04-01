@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--ProductHunter-->
+        <!--Product Hunter-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProductHunter" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,34 +21,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhf-eL-p1M">
                                 <rect key="frame" x="0.0" y="880" width="600" height="120"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEO-z4-8Sv" customClass="ActionButton" customModule="ProductHunter" customModuleProvider="target">
-                                        <rect key="frame" x="305" y="20" width="80" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="Ewc-Ww-CL8"/>
-                                            <constraint firstAttribute="width" constant="80" id="bQe-bW-hgA"/>
-                                        </constraints>
-                                        <state key="normal" title="like">
-                                            <color key="titleColor" red="0.84705882349999995" green="0.33725490200000002" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="40"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.84705882349999995" green="0.33725490200000002" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpL-Z6-We1" customClass="ActionButton" customModule="ProductHunter" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpL-Z6-We1" customClass="ActionButton" customModule="ProductHunter" customModuleProvider="target">
                                         <rect key="frame" x="215" y="20" width="80" height="80"/>
+                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="Myf-De-xct"/>
                                             <constraint firstAttribute="width" constant="80" id="ll0-2v-75M"/>
                                         </constraints>
-                                        <state key="normal" title="dislike">
+                                        <state key="normal" image="DislikeButton">
                                             <color key="titleColor" red="0.84705882349999995" green="0.33725490200000002" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -56,15 +36,37 @@
                                                 <real key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.84705882349999995" green="0.33725490200000002" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="leftCenterTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iLE-iI-Oez"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEO-z4-8Sv" customClass="ActionButton" customModule="ProductHunter" customModuleProvider="target">
+                                        <rect key="frame" x="305" y="20" width="80" height="80"/>
+                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Ewc-Ww-CL8"/>
+                                            <constraint firstAttribute="width" constant="80" id="bQe-bW-hgA"/>
+                                        </constraints>
+                                        <state key="normal" image="LikeButton">
+                                            <color key="titleColor" red="0.84705882349999995" green="0.33725490200000002" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="rightCenterTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Pe-sR-Ivh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="LpL-Z6-We1" firstAttribute="centerX" secondItem="bhf-eL-p1M" secondAttribute="centerX" constant="-45" id="4SZ-6i-JNg"/>
                                     <constraint firstAttribute="height" constant="120" id="HbF-oe-mxn"/>
@@ -74,7 +76,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMG-WC-WLg" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="20" y="72" width="560" height="788"/>
+                                <rect key="frame" x="20" y="80" width="560" height="790"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zMG-WC-WLg" secondAttribute="height" multiplier="3:4" id="N3L-QZ-k2O"/>
@@ -89,15 +91,15 @@
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="bhf-eL-p1M" secondAttribute="trailing" id="4o5-zM-cWT"/>
-                            <constraint firstItem="bhf-eL-p1M" firstAttribute="top" secondItem="zMG-WC-WLg" secondAttribute="bottom" constant="20" id="Cnb-Sk-DFS"/>
-                            <constraint firstItem="zMG-WC-WLg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="GIu-Sy-9CW"/>
+                            <constraint firstItem="bhf-eL-p1M" firstAttribute="top" secondItem="zMG-WC-WLg" secondAttribute="bottom" constant="10" id="Cnb-Sk-DFS"/>
+                            <constraint firstItem="zMG-WC-WLg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="GIu-Sy-9CW"/>
                             <constraint firstItem="bhf-eL-p1M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MiS-5B-dWa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zMG-WC-WLg" secondAttribute="trailing" id="hf2-fN-jZ1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bhf-eL-p1M" secondAttribute="bottom" id="p19-7E-yit"/>
                             <constraint firstItem="zMG-WC-WLg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="r71-PC-kIe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ProductHunter" id="aXN-43-LrD"/>
+                    <navigationItem key="navigationItem" title="Product Hunter" id="aXN-43-LrD"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
@@ -108,14 +110,19 @@
             </objects>
             <point key="canvasLocation" x="1418" y="1122"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Shadow Navigation Controller-->
         <scene sceneID="eb7-OW-bcn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wTg-ch-DmJ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wTg-ch-DmJ" customClass="ShadowNavigationController" customModule="ProductHunter" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gSO-ly-wjM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.84705882349999995" green="0.33725490200000002" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.84705882349999995" green="0.33725490200000002" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textShadowColor" red="0.84705882349999995" green="0.33725490200000002" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -124,7 +131,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hhc-wU-GCI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="342" y="1122"/>
+            <point key="canvasLocation" x="534" y="1122"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DislikeButton" width="76" height="76"/>
+        <image name="LikeButton" width="76" height="76"/>
+    </resources>
 </document>

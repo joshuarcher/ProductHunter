@@ -19,6 +19,7 @@
 		D59BC8FC1CADFA8C0033AFA5 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59BC8F81CADFA8C0033AFA5 /* ProductCardView.swift */; };
 		D59BC8FD1CADFA8C0033AFA5 /* ProductCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59BC8F91CADFA8C0033AFA5 /* ProductCardView.xib */; };
 		D59BC9001CADFB6B0033AFA5 /* ClientSecrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = D59BC8FF1CADFB6B0033AFA5 /* ClientSecrets.plist */; };
+		D59BC9061CAE17B40033AFA5 /* ShadowNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59BC9051CAE17B40033AFA5 /* ShadowNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		D59BC8F81CADFA8C0033AFA5 /* ProductCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
 		D59BC8F91CADFA8C0033AFA5 /* ProductCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCardView.xib; sourceTree = "<group>"; };
 		D59BC8FF1CADFB6B0033AFA5 /* ClientSecrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ClientSecrets.plist; sourceTree = "<group>"; };
+		D59BC9051CAE17B40033AFA5 /* ShadowNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				D59BC8F51CADFA8C0033AFA5 /* ViewController.swift */,
+				D59BC9051CAE17B40033AFA5 /* ShadowNavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D59BC9061CAE17B40033AFA5 /* ShadowNavigationController.swift in Sources */,
 				D59BC8FA1CADFA8C0033AFA5 /* ViewController.swift in Sources */,
 				D598E6C81CADAC4100F3CA9E /* AppDelegate.swift in Sources */,
 				D59BC8FC1CADFA8C0033AFA5 /* ProductCardView.swift in Sources */,

@@ -33,6 +33,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func leftCenterTapped(sender: AnyObject) {
+        swipeView.swipe(.Left)
+    }
+    
+    @IBAction func rightCenterTapped(sender: AnyObject) {
+        swipeView.swipe(.Right)
+    }
 
 
 }
