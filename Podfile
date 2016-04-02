@@ -4,7 +4,11 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'ProductHunter' do
-  pod "Koloda"
+  pod 'Koloda'
+  pod 'Alamofire'
+  pod 'Gloss'
+  pod 'RealmSwift'
+  pod 'RxSwift',    '~> 2.1'
 end
 
 post_install do |installer|

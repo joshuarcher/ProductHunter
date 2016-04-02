@@ -1,13 +1,30 @@
 PODS:
+  - Alamofire (3.3.0)
+  - Gloss (0.7.1)
   - Koloda (2.0.10):
     - pop (~> 1.0)
   - pop (1.0.9)
+  - Realm (0.98.6):
+    - Realm/Headers (= 0.98.6)
+  - Realm/Headers (0.98.6)
+  - RealmSwift (0.98.6):
+    - Realm (= 0.98.6)
+  - RxSwift (2.3.1)
 
 DEPENDENCIES:
+  - Alamofire
+  - Gloss
   - Koloda
+  - RealmSwift
+  - RxSwift (~> 2.1)
 
 SPEC CHECKSUMS:
+  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
+  Gloss: e674d7aa06a7e292a591d0d39a759b826daf503e
   Koloda: 10f747feeff5e425061f78e5ce17208783e34a99
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  Realm: 44803f35418c5d89b27825a564247fcd190de37e
+  RealmSwift: c7239c52c83f8c43525a5269ba7be1694da33afc
+  RxSwift: 829b2843e9eddc77a02cb3f5117f0d55f8f646f1
 
 COCOAPODS: 0.39.0
