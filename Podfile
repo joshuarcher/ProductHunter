@@ -6,9 +6,9 @@ use_frameworks!
 target 'ProductHunter' do
   pod 'Koloda'
   pod 'Alamofire'
-  pod 'Gloss'
   pod 'RealmSwift'
-  pod 'RxSwift',    '~> 2.1'
+  pod 'SwiftyJSON'
+  pod 'PromiseKit', '~> 3.0'
 end
 
 post_install do |installer|

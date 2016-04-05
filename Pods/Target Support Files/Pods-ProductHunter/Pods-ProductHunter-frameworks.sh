@@ -85,19 +85,21 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-ProductHunter/Alamofire.framework"
-  install_framework "Pods-ProductHunter/Gloss.framework"
   install_framework "Pods-ProductHunter/Koloda.framework"
+  install_framework "Pods-ProductHunter/OMGHTTPURLRQ.framework"
+  install_framework "Pods-ProductHunter/PromiseKit.framework"
   install_framework "Pods-ProductHunter/Realm.framework"
   install_framework "Pods-ProductHunter/RealmSwift.framework"
-  install_framework "Pods-ProductHunter/RxSwift.framework"
+  install_framework "Pods-ProductHunter/SwiftyJSON.framework"
   install_framework "Pods-ProductHunter/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-ProductHunter/Alamofire.framework"
-  install_framework "Pods-ProductHunter/Gloss.framework"
   install_framework "Pods-ProductHunter/Koloda.framework"
+  install_framework "Pods-ProductHunter/OMGHTTPURLRQ.framework"
+  install_framework "Pods-ProductHunter/PromiseKit.framework"
   install_framework "Pods-ProductHunter/Realm.framework"
   install_framework "Pods-ProductHunter/RealmSwift.framework"
-  install_framework "Pods-ProductHunter/RxSwift.framework"
+  install_framework "Pods-ProductHunter/SwiftyJSON.framework"
   install_framework "Pods-ProductHunter/pop.framework"
 fi

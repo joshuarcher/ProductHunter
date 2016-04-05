@@ -1,30 +1,49 @@
 PODS:
   - Alamofire (3.3.0)
-  - Gloss (0.7.1)
   - Koloda (2.0.10):
     - pop (~> 1.0)
+  - OMGHTTPURLRQ (3.1.1):
+    - OMGHTTPURLRQ/RQ (= 3.1.1)
+  - OMGHTTPURLRQ/FormURLEncode (3.1.1)
+  - OMGHTTPURLRQ/RQ (3.1.1):
+    - OMGHTTPURLRQ/FormURLEncode
+    - OMGHTTPURLRQ/UserAgent
+  - OMGHTTPURLRQ/UserAgent (3.1.1)
   - pop (1.0.9)
+  - PromiseKit (3.1.0):
+    - PromiseKit/Foundation (= 3.1.0)
+    - PromiseKit/QuartzCore (= 3.1.0)
+    - PromiseKit/UIKit (= 3.1.0)
+  - PromiseKit/CorePromise (3.1.0)
+  - PromiseKit/Foundation (3.1.0):
+    - OMGHTTPURLRQ (~> 3.1.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (3.1.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (3.1.0):
+    - PromiseKit/CorePromise
   - Realm (0.98.6):
     - Realm/Headers (= 0.98.6)
   - Realm/Headers (0.98.6)
   - RealmSwift (0.98.6):
     - Realm (= 0.98.6)
-  - RxSwift (2.3.1)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire
-  - Gloss
   - Koloda
+  - PromiseKit (~> 3.0)
   - RealmSwift
-  - RxSwift (~> 2.1)
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
-  Gloss: e674d7aa06a7e292a591d0d39a759b826daf503e
   Koloda: 10f747feeff5e425061f78e5ce17208783e34a99
+  OMGHTTPURLRQ: 633f98ee745aeda02345935a52eec1784cddb589
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  PromiseKit: 7ed2a3fc5217695305a55a8c47cb3a17ff5fde0d
   Realm: 44803f35418c5d89b27825a564247fcd190de37e
   RealmSwift: c7239c52c83f8c43525a5269ba7be1694da33afc
-  RxSwift: 829b2843e9eddc77a02cb3f5117f0d55f8f646f1
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

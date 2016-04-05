@@ -7,28 +7,32 @@
 //
 
 import Foundation
-import Gloss
+import SwiftyJSON
 
 /**
- JSON class for Product Hunt Posts
+ SwiftJSON class
  */
 
-class PostJSON: Decodable {
+struct PostJSON {
     
     // MARK: Properties
     
-    let id: String?
-    let name: String?
-    let tagline: String?
-    let discussion_url: String?
-    let votes_count: Int?
-    
+    var id: Int
+    var name: String?
+    var tagline: String?
+    var discussion_url: String?
+    var votes_count: Int?
+    var thumbnail_url: String?
     
     init?(json: JSON) {
-        self.id = "id" <~~ json
-        self.name = "name" <~~ json
-        self.tagline = "tagline" <~~ json
-        self.discussion_url = "discussion_url" <~~ json
+        //self.id = json["id"].string
+        guard let id_int = json["id"].int else {return nil}
+        self.id = id_int
+        self.name = json["name"].stringValue
+        self.tagline = json["tagline"].stringValue
+        self.discussion_url = json["discussion_url"].stringValue
+        self.votes_count = json["votes_count"].intValue
+        self.thumbnail_url = json["thumbnail"]["image_url"].stringValue
     }
     
 }

@@ -8,32 +8,52 @@
 
 import Foundation
 import Alamofire
-import Gloss
+import PromiseKit
+import SwiftyJSON
 
-class ProductHuntAPI {
+struct ProductHuntAPI {
     
     
     /**
      Tech posts of the day
      GET https://api.producthunt.com/v1/posts
      */
-    func ph_techPosts() {
+    
+    func getTechPosts() -> Promise<[PostJSON]> {
+        return ph_techPosts()
+            .then { (json) -> [PostJSON] in
+                var posts = [PostJSON]()
+                for (_,subJson):(String, JSON) in json["posts"] {
+                    print(subJson)
+                    let post = PostJSON(json: subJson)
+                    print(post)
+                    posts.append(post!)
+                }
+                return posts
+            }
+    }
+    
+    
+    private func ph_techPosts() -> Promise<JSON> {
         
         // Add Headers
         let headers = [
             "Authorization":"Bearer 79411ff6bbbc83e1271a5b7918d907db572ffd663bbcb72587a77ea4c9e0527c",
             ]
         
-        // Fetch Request
-        Alamofire.request(.GET, "https://api.producthunt.com/v1/posts", headers: headers)
-            .validate(statusCode: 200..<300)
-            .responseJSON { response in
-                if (response.result.error == nil) {
-                    debugPrint("HTTP Response Body: \(response.data)")
-                }
-                else {
-                    debugPrint("HTTP Request failed: \(response.result.error)")
-                }
+        return Promise { fulfill, reject in
+            // Fetch Request
+            Alamofire.request(.GET, "https://api.producthunt.com/v1/posts?days_ago=1", headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { response in
+                    switch response.result {
+                    case .Success(let data):
+                        let json = JSON(data)
+                        fulfill(json)
+                    case .Failure(let error):
+                        debugPrint("HTTP Request failed: \(error)")
+                    }
+            }
         }
     }
     
