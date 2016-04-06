@@ -16,6 +16,7 @@ private var numberOfCards: UInt = 5
 class ViewController: UIViewController {
     
     let API = ProductHuntAPI()
+    let postsManager = PostsEndpoint()
     var posts: [PostJSON]? {
         didSet {
             swipeView.reloadData()
@@ -39,9 +40,14 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        API.getTechPosts().then { (promisedPosts: [PostJSON]) in
+        
+        postsManager.list().then { (promisedPosts: [PostJSON]) in
             self.posts = promisedPosts
         }
+//        API.getTechPosts().then { (promisedPosts: [PostJSON]) in
+//            self.posts = promisedPosts
+//        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,7 +90,6 @@ extension ViewController: KolodaViewDelegate {
 extension ViewController: KolodaViewDataSource {
     
     func koloda(kolodaNumberOfCards koloda:KolodaView) -> UInt {
-//        return numberOfCards
         guard let posts = self.posts else { return 0 }
         return UInt(posts.count)
     }
@@ -92,7 +97,7 @@ extension ViewController: KolodaViewDataSource {
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
         guard let posts = self.posts else { return UIView() }
         let post = posts[Int(index)]
-        return ProductCardView.loadNib(withLabel: post.name!, tagline: post.tagline!)
+        return ProductCardView.loadNib(withLabel: post.name!, tagline: post.tagline!, imageUrl: post.thumbnail_url!)
     }
     
     func koloda(koloda: KolodaView, viewForCardOverlayAtIndex index: UInt) -> OverlayView? {

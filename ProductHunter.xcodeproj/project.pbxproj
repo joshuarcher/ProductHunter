@@ -10,6 +10,7 @@
 		5CCCA808C73B3E7DAE0336D1 /* Pods_ProductHunter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F263BC4F08E26B79E763E2B /* Pods_ProductHunter.framework */; };
 		D51C873C1CB37DA900A8E604 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C873B1CB37DA900A8E604 /* Api.swift */; };
 		D51C873E1CB37E3500A8E604 /* ProductEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C873D1CB37E3500A8E604 /* ProductEndpoint.swift */; };
+		D51C87401CB4BC2C00A8E604 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C873F1CB4BC2C00A8E604 /* UIImage.swift */; };
 		D538914D1CAF6B6C009C2AF9 /* ProductHuntAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D538914C1CAF6B6C009C2AF9 /* ProductHuntAPI.swift */; };
 		D538914F1CAF6FA0009C2AF9 /* PostJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D538914E1CAF6FA0009C2AF9 /* PostJSON.swift */; };
 		D598E6C81CADAC4100F3CA9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D598E6C71CADAC4100F3CA9E /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 		A79D7A4C870043011EB38337 /* Pods-ProductHunter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductHunter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductHunter/Pods-ProductHunter.debug.xcconfig"; sourceTree = "<group>"; };
 		D51C873B1CB37DA900A8E604 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		D51C873D1CB37E3500A8E604 /* ProductEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductEndpoint.swift; sourceTree = "<group>"; };
+		D51C873F1CB4BC2C00A8E604 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		D538914C1CAF6B6C009C2AF9 /* ProductHuntAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductHuntAPI.swift; sourceTree = "<group>"; };
 		D538914E1CAF6FA0009C2AF9 /* PostJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostJSON.swift; sourceTree = "<group>"; };
 		D598E6C41CADAC4100F3CA9E /* ProductHunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductHunter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +161,7 @@
 				D598E6D01CADAC4100F3CA9E /* LaunchScreen.storyboard */,
 				D598E6D31CADAC4100F3CA9E /* Info.plist */,
 				D59BC8FF1CADFB6B0033AFA5 /* ClientSecrets.plist */,
+				D51C873F1CB4BC2C00A8E604 /* UIImage.swift */,
 			);
 			path = ProductHunter;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D59BC9061CAE17B40033AFA5 /* ShadowNavigationController.swift in Sources */,
+				D51C87401CB4BC2C00A8E604 /* UIImage.swift in Sources */,
 				D51C873E1CB37E3500A8E604 /* ProductEndpoint.swift in Sources */,
 				D538914D1CAF6B6C009C2AF9 /* ProductHuntAPI.swift in Sources */,
 				D59BC8FA1CADFA8C0033AFA5 /* ViewController.swift in Sources */,

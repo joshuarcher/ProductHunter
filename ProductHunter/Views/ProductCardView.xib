@@ -118,6 +118,7 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="innerView" destination="4ac-Kd-aGm" id="2gT-4n-gl1"/>
+                <outlet property="productImage" destination="Yeh-Ha-H0g" id="4iK-Ew-l16"/>
                 <outlet property="productName" destination="Grm-7G-qBI" id="NHu-mV-jZg"/>
                 <outlet property="productTagline" destination="1gM-Eh-m2V" id="Tf7-5f-iR2"/>
             </connections>

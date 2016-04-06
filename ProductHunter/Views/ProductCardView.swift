@@ -13,8 +13,9 @@ class ProductCardView: UIView {
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productTagline: UILabel!
     @IBOutlet weak var innerView: UIView!
+    @IBOutlet weak var productImage: UIImageView!
     
-    class func loadNib(withLabel name: String, tagline: String) -> UIView {
+    class func loadNib(withLabel name: String, tagline: String, imageUrl: String) -> UIView {
         let productView = UINib(nibName: "ProductCardView", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as! ProductCardView
         productView.productName.text = name
         productView.productTagline.text = tagline
@@ -27,7 +28,12 @@ class ProductCardView: UIView {
         productView.layer.shadowRadius = 3
         productView.layer.shadowOffset = CGSizeMake(0, 1)
         productView.layer.masksToBounds = false
+        productView.downloadImage(fromURL: imageUrl)
         return productView
+    }
+    
+    func downloadImage(fromURL url: String) {
+        self.productImage.imageFromUrl(url)
     }
     
     /*

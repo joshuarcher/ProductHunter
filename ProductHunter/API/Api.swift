@@ -29,12 +29,15 @@ struct Api {
     }
     
     static func getConfiguration() ->  NSURLSessionConfiguration {
-        let headers = Alamofire.Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders ?? [:]
+        var headers = Alamofire.Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders ?? [:]
+//        headers
+        headers["Authorization"] = "Bearer 79411ff6bbbc83e1271a5b7918d907db572ffd663bbcb72587a77ea4c9e0527c"
         
-//        if keychain["authToken"] != nil || keychain["authToken"] != "" {
-//            headers["X-Authorization"] = keychain["authToken"]
-//        }
+//        let headers = [
+//            "Authorization":"Bearer 79411ff6bbbc83e1271a5b7918d907db572ffd663bbcb72587a77ea4c9e0527c",
+//            ]
         
+
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         configuration.HTTPAdditionalHeaders = headers
         
@@ -43,7 +46,7 @@ struct Api {
     
     static func apiEndpoint(endpoint: String) -> String {
         // TODO: update for live env
-        return "http://jeroen.local:8080\(endpoint)"
+        return "https://api.producthunt.com/v1\(endpoint)"
     }
     
     private static func request(endpoint: String, method: Alamofire.Method, paramaters: params, encoding: ParameterEncoding) -> Promise<JSON> {
@@ -58,12 +61,7 @@ struct Api {
                 switch response.result {
                 case .Success(let data):
                     let json = JSON(data)
-                    
-                    if json["success"] {
-                        fulfill(json)
-                    } else {
-                        reject(ApiError(json: json))
-                    }
+                    fulfill(json)
                 case .Failure(let error):
                     reject(error)
                     print("Request failed with error: \(error)")
@@ -74,17 +72,5 @@ struct Api {
     
     static func get(endpoint: String, paramaters: params) -> Promise<JSON> {
         return request(endpoint, method: .GET, paramaters: paramaters, encoding: .URLEncodedInURL)
-    }
-    
-    static func post(endpoint: String, paramaters: params) -> Promise<JSON> {
-        return request(endpoint, method: .POST, paramaters: paramaters, encoding: .JSON)
-    }
-    
-    static func put(endpoint: String, paramaters: params) -> Promise<JSON> {
-        return request(endpoint, method: .PUT, paramaters: paramaters, encoding: .JSON)
-    }
-    
-    static func delete(endpoint: String, paramaters: params) -> Promise<JSON> {
-        return request(endpoint, method: .DELETE, paramaters: paramaters, encoding: .URLEncodedInURL)
     }
 }
