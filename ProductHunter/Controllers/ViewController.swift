@@ -84,6 +84,10 @@ extension ViewController: KolodaViewDelegate {
     func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt) {
         UIApplication.sharedApplication().openURL(NSURL(string: "recall-that.com")!)
     }
+    
+    func koloda(kolodaShouldTransparentizeNextCard koloda: KolodaView) -> Bool {
+        return false
+    }
 }
 
 // MARK: KolodaViewDataSource

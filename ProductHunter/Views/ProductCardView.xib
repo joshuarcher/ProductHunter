@@ -15,7 +15,7 @@
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ac-Kd-aGm">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="699"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abot-image" translatesAutoresizingMaskIntoConstraints="NO" id="Yeh-Ha-H0g">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yeh-Ha-H0g">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="639"/>
                             <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
@@ -125,7 +125,4 @@
             <point key="canvasLocation" x="676" y="419.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="abot-image" width="180" height="174"/>
-    </resources>
 </document>
