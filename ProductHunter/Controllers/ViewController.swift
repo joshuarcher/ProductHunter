@@ -10,6 +10,7 @@ import UIKit
 import Koloda
 import SwiftyJSON
 import PromiseKit
+import SafariServices
 
 private var numberOfCards: UInt = 5
 
@@ -62,6 +63,12 @@ class ViewController: UIViewController {
     @IBAction func rightCenterTapped(sender: AnyObject) {
         swipeView.swipe(.Right)
     }
+    
+    private func openSafari(forUrl url: String) {
+        let svc = SFSafariViewController(URL: NSURL(string: url)!)
+        svc.modalPresentationStyle = .OverCurrentContext
+        self.presentViewController(svc, animated: true, completion: nil)
+    }
 
 
 }
@@ -82,7 +89,9 @@ extension ViewController: KolodaViewDelegate {
     }
     
     func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "recall-that.com")!)
+        guard let posts = self.posts else { return }
+        let post = posts[Int(index)]
+        openSafari(forUrl: post.discussion_url!)
     }
     
     func koloda(kolodaShouldTransparentizeNextCard koloda: KolodaView) -> Bool {
