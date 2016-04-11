@@ -14,11 +14,16 @@ import UIKit
 extension UIImageView {
     public func imageFromUrl(urlString: String) {
         if let url = NSURL(string: urlString) {
-            let request = NSURLRequest(URL: url)
-            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {
-                (response: NSURLResponse?, data: NSData?, error: NSError?) -> Void in
-                self.image = UIImage(data: data!)
-            }
+//            let request = NSURL(URL: url)
+            let session = NSURLSession.sharedSession()
+            session.dataTaskWithURL(url, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) in
+                if let data = data {
+                    let image = UIImage(data: data)
+                    dispatch_async(dispatch_get_main_queue(), { 
+                        self.image = image
+                    })
+                }
+            }).resume()
         }
     }
 }

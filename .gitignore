@@ -94,4 +94,4 @@ fastlane/screenshots
 fastlane/test_output
 
 # Secrets file
-*ClientSecrets.plist
+#*ClientSecrets.plist
