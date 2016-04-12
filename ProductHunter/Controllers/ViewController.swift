@@ -45,10 +45,6 @@ class ViewController: UIViewController {
         postsManager.list().then { (promisedPosts: [PostJSON]) in
             self.posts = promisedPosts
         }
-//        API.getTechPosts().then { (promisedPosts: [PostJSON]) in
-//            self.posts = promisedPosts
-//        }
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,15 +73,13 @@ class ViewController: UIViewController {
 extension ViewController: KolodaViewDelegate {
     
     func koloda(koloda: KolodaView, didSwipedCardAtIndex index: UInt, inDirection direction: SwipeResultDirection) {
-        //Example: loading more cards
         if index >= 10 {
             swipeView.reloadData()
         }
     }
     
     func koloda(kolodaDidRunOutOfCards koloda: KolodaView) {
-        //Example: reloading
-        swipeView.resetCurrentCardNumber()
+        swipeView.resetCurrentCardIndex()
     }
     
     func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt) {
@@ -102,7 +96,7 @@ extension ViewController: KolodaViewDelegate {
 // MARK: KolodaViewDataSource
 extension ViewController: KolodaViewDataSource {
     
-    func koloda(kolodaNumberOfCards koloda:KolodaView) -> UInt {
+    func kolodaNumberOfCards(koloda: KolodaView) -> UInt {
         guard let posts = self.posts else { return 0 }
         return UInt(posts.count)
     }

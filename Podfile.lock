@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (3.3.0)
-  - Koloda (2.0.10):
+  - Koloda (3.0.0):
     - pop (~> 1.0)
   - OMGHTTPURLRQ (3.1.1):
     - OMGHTTPURLRQ/RQ (= 3.1.1)
@@ -31,14 +31,23 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - Koloda
+  - Koloda (from `https://github.com/joshuarcher/Koloda`)
   - PromiseKit (~> 3.0)
   - RealmSwift
   - SwiftyJSON
 
+EXTERNAL SOURCES:
+  Koloda:
+    :git: https://github.com/joshuarcher/Koloda
+
+CHECKOUT OPTIONS:
+  Koloda:
+    :commit: 8aee501d353c6265a34f55fb44cf944ed3232e9c
+    :git: https://github.com/joshuarcher/Koloda
+
 SPEC CHECKSUMS:
   Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
-  Koloda: 10f747feeff5e425061f78e5ce17208783e34a99
+  Koloda: 315aa5d2ef4138df90c42ee77c18af0727528e6a
   OMGHTTPURLRQ: 633f98ee745aeda02345935a52eec1784cddb589
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   PromiseKit: 7ed2a3fc5217695305a55a8c47cb3a17ff5fde0d
